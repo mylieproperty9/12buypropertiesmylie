@@ -4,6 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <title>Mylee Thay | Negeri Sembilan Property Specialist</title>
 
@@ -20,14 +21,14 @@ scroll-behavior:smooth;
 }
 
 body{
-font-family:Arial, Helvetica, sans-serif;
+font-family:'Poppins', Arial, Helvetica, sans-serif;
 background:#ffffff;
 color:#333;
 line-height:1.6;
 }
 
 .hero{
-background:linear-gradient(135deg,#fff8fb,#ffe8f2);
+background:linear-gradient(135deg,#ffffff,#fdeef5,#ffe0ef);
 padding:80px 30px;
 }
 
@@ -89,6 +90,8 @@ transition:.3s;
 
 .btn:hover{
 opacity:.9;
+transform:translateY(-3px);
+box-shadow:0 12px 25px rgba(231,138,181,.35);
 }
 
 .section{
@@ -147,6 +150,12 @@ border-radius:18px;
 text-align:center;
 box-shadow:0 8px 20px rgba(0,0,0,.05);
 font-weight:600;
+}
+
+.card:hover{
+transform:translateY(-8px);
+box-shadow:0 18px 35px rgba(0,0,0,.12);
+transition:.3s;
 }
 
 .form-box{
@@ -215,20 +224,22 @@ z-index:999;
 
 @media(max-width:768px){
 
-.hero{
-padding:50px 20px;
-}
+.hero{padding:50px 20px;}
 
-.hero-content{
-flex-direction:column-reverse;
-gap:30px;
-}
+.hero-content{flex-direction:column-reverse;gap:30px;}
 
-.hero-photo img{
-width:280px;
-max-width:90%;
-margin:auto;
-display:block;
+.hero-photo img{width:280px;max-width:90%;margin:auto;display:block;}
+
+.hero-text{text-align:center;}
+
+.hero-text h1{font-size:38px;}
+
+.hero-text p{font-size:18px;}
+
+.section-title{font-size:32px;}
+
+.btn{display:block;width:100%;max-width:320px;margin:12px auto;}
+
 }
 
 .hero-text{
@@ -247,14 +258,8 @@ font-size:18px;
 font-size:32px;
 }
 
-.btn{
-display:block;
-width:100%;
-max-width:320px;
-margin:12px auto;
 }
 
-}
 </style>
 
 </head>
@@ -270,7 +275,7 @@ margin:12px auto;
 <div class="hero-text">
 
 <h1>
-🏠 SELLING YOUR PROPERTY IN NEGERI SEMBILAN?
+Looking to Sell Your Property<br>in Negeri Sembilan?
 </h1>
 
 <p>
