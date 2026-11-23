@@ -1,559 +1,251 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-<title>Mylee Thay | Negeri Sembilan Property Specialist</title>
-
+<title>12Buy Properties | Mylee Thay</title>
 <style>
+:root{--teal:#087f83;--teal2:#0b656b;--red:#d93440;--ink:#173638;--muted:#627879;--pale:#edf8f7;--white:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:#fff}
+header{height:76px;display:flex;align-items:center;justify-content:space-between;padding:0 max(6vw,24px);background:#fff;position:sticky;top:0;z-index:10;box-shadow:0 3px 18px #0b656b12}
+.brand{font-weight:900;letter-spacing:1.4px;color:var(--teal);font-size:21px}.brand span{color:var(--red)}
+nav{display:flex;gap:25px;align-items:center}nav a{color:#29494a;text-decoration:none;font-size:13px;font-weight:700}.lang{border:1px solid #d8e9e8;padding:8px 12px;border-radius:20px;color:var(--teal);font-size:12px;background:#fff;font-weight:800;cursor:pointer}
+.hero{background:linear-gradient(115deg,#eaf7f6 0%,#f7fbfa 58%,#d8efed 100%);padding:42px max(8vw,24px) 0;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:3vw;min-height:610px;overflow:hidden}
+.portrait-wrap{height:520px;width:100%;max-width:500px;justify-self:end;align-self:end;position:relative;display:flex;align-items:flex-end;justify-content:center;overflow:visible}.portrait{height:100%;width:100%;object-fit:contain;object-position:center bottom;display:block;position:relative;filter:drop-shadow(0 18px 22px #124d4b22)}
+.eyebrow{color:var(--red);font-size:12px;font-weight:900;letter-spacing:2px;text-transform:uppercase}
+h1{font-size:clamp(42px,5vw,68px);line-height:1.03;margin:16px 0 12px;color:var(--teal2);letter-spacing:-2px}
+.name{font-size:24px;font-weight:800;margin:0 0 16px}.lead{color:var(--muted);font-size:17px;line-height:1.7;max-width:540px}
+.ren{display:inline-block;background:#fff;border-left:4px solid var(--red);padding:11px 16px;margin:12px 0 22px;font-size:13px;font-weight:800;box-shadow:0 5px 18px #0b656b12}
+.btn{display:inline-block;background:var(--red);color:#fff;text-decoration:none;font-weight:800;padding:15px 23px;border-radius:7px;font-size:13px;box-shadow:0 8px 20px #d9344030}
+section{padding:78px max(8vw,24px)}.section-head{text-align:center;margin-bottom:36px}.section-head .eyebrow{margin-bottom:10px}.section-head h2{font-size:34px;color:var(--teal2);margin:0}.section-head p{color:var(--muted);line-height:1.6}
+.services{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.service{border:1px solid #e0eeed;border-radius:14px;overflow:hidden;background:#fff;box-shadow:0 10px 25px #0b656b0c;transition:.2s}.service:hover{transform:translateY(-5px);box-shadow:0 16px 32px #0b656b18}.service img{width:100%;height:170px;object-fit:cover}.service div{padding:18px}.service h3{color:var(--teal);margin:0 0 7px;font-size:19px}.service p{margin:0;color:var(--muted);font-size:13px;line-height:1.5}
+.about{background:var(--pale);display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}.about h2{font-size:35px;color:var(--teal2);margin:10px 0}.about p{color:var(--muted);line-height:1.8}.stats{display:grid;grid-template-columns:1fr 1fr;gap:14px}.stat{background:#fff;border-radius:12px;padding:23px;border-bottom:4px solid var(--red)}.stat strong{display:block;font-size:27px;color:var(--teal)}.stat span{font-size:12px;color:var(--muted)}
+.awards{display:grid;grid-template-columns:1fr 1fr;gap:24px}.award{border:1px solid #e2eeee;border-radius:14px;overflow:hidden;background:#fff}.award img{width:100%;height:280px;object-fit:cover;background:#f4f7f7}.award .copy{padding:20px}.award h3{margin:0 0 8px;color:var(--teal);font-size:21px}.award p{margin:0;color:var(--muted);font-size:14px;line-height:1.6}
+.contact{background:var(--teal2);color:#fff;text-align:center}.contact h2{font-size:36px;margin:0 0 12px}.contact p{color:#d6eeee;line-height:1.7}.contact .btn{background:var(--red);margin-top:12px}
+footer{padding:24px;text-align:center;color:#789091;font-size:12px}
+@media(max-width:850px){nav{gap:12px}nav a{font-size:11px}.hero{grid-template-columns:1fr;gap:10px;padding-top:42px}.portrait-wrap{height:410px;width:min(100%,380px);justify-self:center;order:2;margin-top:-5px}.hero-copy{text-align:center}.lead{margin-left:auto;margin-right:auto}.services{grid-template-columns:repeat(2,1fr)}.about{grid-template-columns:1fr}.awards{grid-template-columns:1fr}}
+@media(max-width:560px){header{height:auto;padding:18px 20px;align-items:flex-start;gap:12px;flex-direction:column}nav{width:100%;overflow:auto;padding-bottom:3px}.hero{padding-left:22px;padding-right:22px}.portrait-wrap{height:360px;width:100%;max-width:320px}section{padding:58px 22px}.services{grid-template-columns:1fr 1fr;gap:10px}.service img{height:125px}.service div{padding:13px}.service h3{font-size:16px}.section-head h2{font-size:28px}.stats{gap:9px}.stat{padding:16px}}
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
+.valuation{background:#f5faf9}
+.valuation-form{max-width:730px;margin:0 auto;display:grid;gap:14px}
+.valuation-form input,.valuation-form select,.valuation-form textarea{width:100%;border:1px solid #d9e1e1;border-radius:10px;padding:16px 18px;font:inherit;font-size:15px;color:#243c3d;background:#fff;outline:none}
+.valuation-form input:focus,.valuation-form select:focus,.valuation-form textarea:focus{border-color:var(--teal);box-shadow:0 0 0 3px #087f8315}
+.valuation-form textarea{resize:vertical}
+.valuation-submit{width:100%;border:0;cursor:pointer;font-size:15px}
 
-html{
-scroll-behavior:smooth;
-}
 
-body{
-font-family:'Poppins', Arial, Helvetica, sans-serif;
-background:#ffffff;
-color:#333;
-line-height:1.6;
-}
-
-.hero{
-background:linear-gradient(135deg,#ffffff,#fdeef5,#ffe0ef);
-padding:80px 30px;
-}
-
-.container{
-max-width:1200px;
-margin:auto;
-}
-
-.hero-content{
-display:flex;
-align-items:center;
-justify-content:space-between;
-gap:60px;
-flex-wrap:wrap;
-}
-
-.hero-text{
-flex:1;
-min-width:320px;
-}
-
-.hero-text h1{
-font-size:58px;
-line-height:1.15;
-color:#1f2937;
-margin-bottom:20px;
-}
-
-.hero-text p{
-font-size:20px;
-color:#555;
-margin-bottom:30px;
-}
-
-.hero-photo{
-flex:1;
-text-align:center;
-}
-
-.hero-photo img{
-width:100%;
-max-width:430px;
-border-radius:25px;
-box-shadow:0 20px 50px rgba(0,0,0,.15);
-}
-
-.btn{
-display:inline-block;
-padding:15px 28px;
-background:#e78ab5;
-color:white;
-text-decoration:none;
-border-radius:12px;
-font-weight:bold;
-margin-right:10px;
-margin-bottom:10px;
-transition:.3s;
-}
-
-.btn:hover{
-opacity:.9;
-transform:translateY(-3px);
-box-shadow:0 12px 25px rgba(231,138,181,.35);
-}
-
-.section{
-padding:80px 20px;
-}
-
-.section-title{
-text-align:center;
-font-size:42px;
-margin-bottom:40px;
-color:#1f2937;
-}
-
-.about{
-max-width:900px;
-margin:auto;
-text-align:center;
-font-size:18px;
-}
-
-.stats{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:25px;
-max-width:1100px;
-margin:auto;
-}
-
-.stat-box{
-background:white;
-padding:35px;
-border-radius:18px;
-text-align:center;
-box-shadow:0 10px 25px rgba(0,0,0,.08);
-}
-
-.stat-number{
-font-size:40px;
-font-weight:bold;
-color:#e78ab5;
-margin-bottom:10px;
-}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:25px;
-max-width:1100px;
-margin:auto;
-}
-
-.card{
-background:#fafafa;
-padding:30px;
-border-radius:18px;
-text-align:center;
-box-shadow:0 8px 20px rgba(0,0,0,.05);
-font-weight:600;
-}
-
-.card:hover{
-transform:translateY(-8px);
-box-shadow:0 18px 35px rgba(0,0,0,.12);
-transition:.3s;
-}
-
-.form-box{
-max-width:700px;
-margin:auto;
-}
-
-input,
-select{
-width:100%;
-padding:15px;
-margin-bottom:15px;
-border:1px solid #ddd;
-border-radius:10px;
-font-size:16px;
-}
-
-.submit-btn{
-width:100%;
-padding:16px;
-background:#e78ab5;
-border:none;
-color:white;
-font-size:18px;
-font-weight:bold;
-border-radius:10px;
-cursor:pointer;
-}
-
-.contact{
-background:#1f2937;
-color:white;
-text-align:center;
-padding:80px 20px;
-}
-
-.contact h2{
-margin-bottom:20px;
-}
-
-.contact p{
-margin:10px 0;
-font-size:18px;
-}
-
-.footer{
-background:black;
-color:white;
-text-align:center;
-padding:20px;
-}
-
-.whatsapp{
-position:fixed;
-right:20px;
-bottom:20px;
-background:#25D366;
-color:white;
-padding:15px 20px;
-border-radius:50px;
-text-decoration:none;
-font-weight:bold;
-box-shadow:0 5px 20px rgba(0,0,0,.2);
-z-index:999;
-}
-
-@media(max-width:768px){
-
-.hero{padding:50px 20px;}
-
-.hero-content{flex-direction:column-reverse;gap:30px;}
-
-.hero-photo img{width:280px;max-width:90%;margin:auto;display:block;}
-
-.hero-text{text-align:center;}
-
-.hero-text h1{font-size:38px;}
-
-.hero-text p{font-size:18px;}
-
-.section-title{font-size:32px;}
-
-.btn{display:block;width:100%;max-width:320px;margin:12px auto;}
-
-}
-
-.hero-text{
-text-align:center;
-}
-
-.hero-text h1{
-font-size:38px;
-}
-
-.hero-text p{
-font-size:18px;
-}
-
-.section-title{
-font-size:32px;
-}
-
-}
+/* Added trust-building sections */
+.trust-section{background:#fff}
+.trust-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:1080px;margin:0 auto}
+.trust-card{background:#f1f9f8;border:1px solid #dceeed;border-radius:14px;padding:22px}
+.trust-card .trust-icon{font-size:25px;color:var(--red);margin-bottom:12px}
+.trust-card h3{color:var(--teal2);margin:0 0 8px;font-size:18px}
+.trust-card p{color:var(--muted);font-size:14px;line-height:1.65;margin:0}
+.help-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.help-card{border-radius:14px;padding:24px;background:var(--pale);border-top:4px solid var(--red)}
+.help-card h3{color:var(--teal2);margin:0 0 10px}
+.help-card p{color:var(--muted);font-size:14px;line-height:1.65;margin:0 0 16px}
+.help-card a{color:var(--red);font-size:13px;font-weight:800;text-decoration:none}
+.locations{background:linear-gradient(120deg,#087f83,#0b656b);color:#fff}
+.locations .section-head h2,.locations .section-head p{color:#fff}
+.location-pills{display:flex;justify-content:center;flex-wrap:wrap;gap:12px}
+.location-pill{background:#ffffff18;border:1px solid #ffffff55;border-radius:999px;padding:13px 22px;font-weight:700;color:#fff}
+.faq-list{max-width:850px;margin:0 auto;display:grid;gap:12px}
+.faq-item{border:1px solid #dceeed;border-radius:12px;padding:18px 20px;background:#fff}
+.faq-item h3{font-size:16px;color:var(--teal2);margin:0 0 8px}
+.faq-item p{font-size:14px;line-height:1.65;color:var(--muted);margin:0}
+@media(max-width:850px){.trust-grid,.help-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.trust-grid,.help-grid{grid-template-columns:1fr}.location-pill{padding:11px 16px}}
 
 </style>
-
 </head>
-
 <body>
+<header><div class="brand">12BUY<span>.</span> PROPERTIES</div><nav><a href="#home">HOME</a><a href="#about">ABOUT</a><a href="#why-mylee">WHY MYLEE</a><a href="#services">PROPERTY SERVICES</a><a href="#locations">AREAS</a><a href="#awards">AWARDS</a><a href="#valuation">VALUATION</a><a href="#contact">CONTACT</a><button class="lang" id="languageToggle" type="button">EN | 中文</button></nav></header>
+<main>
+<section class="hero" id="home">
+ <div class="portrait-wrap"><img class="portrait" src="assets/MYLEE_HALF_CUTOUT.png" alt="Mylee Thay"></div>
+ <div class="hero-copy"><div class="eyebrow">Your Property Journey Starts Here</div><h1>Find Your<br>Property.<br>Build Your Future.</h1><p class="name">Mylee Thay</p><p class="lead">Your trusted real estate advisor in Negeri Sembilan. Helping you navigate Residential, Commercial, Industrial and Land opportunities.</p><div class="ren">14 YEARS EXPERIENCE &nbsp; | &nbsp; REN 06204</div><br><a class="btn" href="https://wa.me/60123422309?text=Hello%20Mylee%2C%20I%20would%20like%20to%20enquire%20about%20a%20property.%20I%20am%20interested%20in%20buying%2C%20selling%2C%20or%20renting.%20Could%20you%20please%20assist%20me%3F">LET'S TALK PROPERTY</a></div>
+</section>
+<section id="services"><div class="section-head"><div class="eyebrow">What I Do</div><h2>Property Services</h2><p>One trusted contact for your property needs.</p></div>
+<div class="services">
+ <article class="service"><img src="assets/RESIDENTIAL.JPEG" alt="Residential property"><div><h3>Residential</h3><p>Homes, landed properties and residences.</p></div></article>
+ <article class="service"><img src="assets/COMMERCIAL.jpg" alt="Commercial property"><div><h3>Commercial</h3><p>Shop offices and business properties.</p></div></article>
+ <article class="service"><img src="assets/INDUSTRIAL.jpeg" alt="Industrial property"><div><h3>Industrial</h3><p>Factories, warehouses and industrial spaces.</p></div></article>
+ <article class="service"><img src="assets/LAND.jpg" alt="Land"><div><h3>Land</h3><p>Land opportunities for investment and development.</p></div></article>
+</div></section>
 
-<section class="hero">
-
-<div class="container">
-
-<div class="hero-content">
-
-<div class="hero-text">
-
-<h1>
-Looking to Sell Your Property<br>in Negeri Sembilan?
-</h1>
-
-<p>
-Get a FREE Property Valuation Today.<br>
-14+ Years Experience | REN 06204<br><br>
-Helping Property Owners Sell With Confidence.
-</p>
-
-<a href="https://wa.me/60123422309" class="btn">
-📲 WhatsApp Me
-</a>
-
-<a href="#valuation" class="btn">
-🏡 Free Valuation
-</a>
-
-</div>
-
-<div class="hero-photo">
-
-<img src="mylee.jpg" alt="Mylee Thay">
-
-</div>
-
-</div>
-
-</div>
-
+<section class="trust-section" id="why-mylee">
+ <div class="section-head"><div class="eyebrow">Why Work With Me</div><h2>Why Choose Mylee?</h2><p>Professional guidance, local knowledge and support throughout your property journey.</p></div>
+ <div class="trust-grid">
+  <article class="trust-card"><div class="trust-icon">✦</div><h3>14 Years of Experience</h3><p>Practical real estate experience to help you understand your options and make informed decisions.</p></article>
+  <article class="trust-card"><div class="trust-icon">⌖</div><h3>Local Market Knowledge</h3><p>Focused on Negeri Sembilan, with knowledge of residential, commercial, industrial and land opportunities.</p></article>
+  <article class="trust-card"><div class="trust-icon">✓</div><h3>Guidance Throughout</h3><p>Support from your first enquiry and property viewing through the next steps of your transaction.</p></article>
+ </div>
 </section>
 
-<section class="section">
-
-<h2 class="section-title">
-⭐ Why Property Owners Work With Me
-</h2>
-
-<div class="stats">
-
-<div class="stat-box">
-<div class="stat-number">14+</div>
-Years Experience
-</div>
-
-<div class="stat-box">
-<div class="stat-number">FREE</div>
-Property Valuation
-</div>
-
-<div class="stat-box">
-<div class="stat-number">NS</div>
-Local Market Specialist
-</div>
-
-<div class="stat-box">
-<div class="stat-number">FAST</div>
-Response & Consultation
-</div>
-
-</div>
-
+<section id="how-can-help">
+ <div class="section-head"><div class="eyebrow">How I Can Help</div><h2>What Are You Looking For?</h2><p>Whether you are buying, selling or renting, let's discuss your property needs.</p></div>
+ <div class="help-grid">
+  <article class="help-card"><h3>Looking to Buy?</h3><p>Tell me your preferred location, budget and property type. I can help you explore suitable options in Negeri Sembilan.</p><a href="https://wa.me/60123422309?text=Hello%20Mylee%2C%20I%20am%20looking%20to%20buy%20a%20property.%20Could%20you%20please%20assist%20me%3F">I WANT TO BUY →</a></article>
+  <article class="help-card"><h3>Looking to Sell?</h3><p>Understand your property's market position and discuss the next steps towards selling.</p><a href="#valuation">REQUEST A FREE VALUATION →</a></article>
+  <article class="help-card"><h3>Looking to Rent?</h3><p>Share your preferred area, budget and requirements so we can discuss suitable rental options.</p><a href="https://wa.me/60123422309?text=Hello%20Mylee%2C%20I%20am%20looking%20to%20rent%20a%20property.%20Could%20you%20please%20assist%20me%3F">I WANT TO RENT →</a></article>
+ </div>
 </section>
 
-<section class="section">
-
-<h2 class="section-title">
-👩 About Mylee Thay
-</h2>
-
-<div class="about">
-
-<p>
-Do you know what your property is worth in today's market?
-</p>
-
-<br>
-
-<p>
-With more than 14 years of experience in the Negeri Sembilan property market, I have helped homeowners, landlords, investors and buyers achieve successful property transactions.
-</p>
-
-<br>
-
-<p>
-I specialise in Subsale Properties, New Development Projects, Commercial Properties, Residential Homes, Land and Investment Opportunities throughout Negeri Sembilan.
-</p>
-
-</div>
-
+<section class="locations" id="locations">
+ <div class="section-head"><div class="eyebrow" style="color:#ffdddd">Where I Work</div><h2>Explore Negeri Sembilan</h2><p>Property opportunities across key areas in Negeri Sembilan.</p></div>
+ <div class="location-pills">
+  <span class="location-pill">Seremban</span><span class="location-pill">Seremban 2</span><span class="location-pill">Sendayan</span><span class="location-pill">Bandar Enstek</span><span class="location-pill">Port Dickson</span>
+ </div>
 </section>
 
-<section class="section">
-
-<h2 class="section-title">
-🏡 Property Types
-</h2>
-
-<div class="grid">
-
-<div class="card">🏠 Terrace House</div>
-<div class="card">🏡 Semi-Detached House</div>
-<div class="card">🏘 Bungalow</div>
-<div class="card">🏢 Condominium</div>
-<div class="card">🏬 Shoplot</div>
-<div class="card">🌳 Land</div>
-<div class="card">🏭 Industrial Property</div>
-
-</div>
-
+<section id="faq">
+ <div class="section-head"><div class="eyebrow">Good to Know</div><h2>Frequently Asked Questions</h2><p>A few helpful answers before we get started.</p></div>
+ <div class="faq-list">
+  <article class="faq-item"><h3>I'm from Kuala Lumpur. Can you help me view properties in Negeri Sembilan?</h3><p>Yes. Contact Mylee with your preferred area and requirements to discuss suitable properties and arrange a viewing.</p></article>
+  <article class="faq-item"><h3>Do you handle more than residential properties?</h3><p>Yes. Services cover Residential, Commercial, Industrial and Land property enquiries.</p></article>
+  <article class="faq-item"><h3>Can I ask for a property valuation?</h3><p>Yes. Complete the Free Property Valuation form on this website and the details will be prepared in a WhatsApp message to Mylee.</p></article>
+  <article class="faq-item"><h3>How do I get started?</h3><p>Use the Contact Mylee button and send the pre-filled WhatsApp message. You can share whether you want to buy, sell or rent.</p></article>
+ </div>
 </section>
 
-<section class="section">
+<section class="about" id="about"><div><div class="eyebrow">Get to Know Mylee</div><h2>Experience You Can Trust.</h2><p>With 14 years of experience in the real estate industry, Mylee Thay focuses on helping clients explore property opportunities throughout Negeri Sembilan. From finding a home to evaluating commercial, industrial and land opportunities, the goal is to make every property journey clearer and more confident.</p><a class="btn" href="https://wa.me/60123422309?text=Hello%20Mylee%2C%20I%20would%20like%20to%20enquire%20about%20a%20property.%20I%20am%20interested%20in%20buying%2C%20selling%2C%20or%20renting.%20Could%20you%20please%20assist%20me%3F">CONTACT MYLEE</a></div><div class="stats"><div class="stat"><strong>14+</strong><span>Years of Experience</span></div><div class="stat"><strong>4</strong><span>Property Categories</span></div><div class="stat"><strong>REN</strong><span>06204 Registered Negotiator</span></div><div class="stat"><strong>NS</strong><span>Negeri Sembilan Focus</span></div></div></section>
+<section id="awards"><div class="section-head"><div class="eyebrow">Recognition & Milestones</div><h2>Awards & Achievements</h2><p>Professional milestones that reflect dedication to the real estate industry.</p></div><div class="awards">
+ <article class="award"><img src="assets/nrea.jpeg" alt="NREA award photograph"><div class="copy"><h3>NREA 2026</h3><p>State REN of the Year – Residential<br>Negeri Sembilan</p></div></article>
+ <article class="award"><img src="assets/esp.jpg" alt="ESP achievement photograph"><div class="copy"><h3>ESP Achievement</h3><p>A milestone in Mylee's professional journey.</p></div></article>
+</div></section>
 
-<h2 class="section-title">
-📍 Areas Covered
-</h2>
-
-<div class="grid">
-
-<div class="card">Seremban</div>
-<div class="card">Senawang</div>
-<div class="card">Sendayan</div>
-<div class="card">Nilai</div>
-<div class="card">Port Dickson</div>
-<div class="card">Bahau</div>
-<div class="card">Tampin</div>
-<div class="card">Rembau</div>
-
-</div>
-
+<section id="valuation" class="valuation">
+  <div class="section-head">
+    <div class="eyebrow">Thinking of Selling?</div>
+    <h2>Free Property Valuation</h2>
+    <p>Share a few details about your property. Mylee will get in touch with you.</p>
+  </div>
+  <form class="valuation-form" id="valuationForm">
+    <input name="name" type="text" placeholder="👤 Full Name" required>
+    <input name="phone" type="tel" placeholder="📱 Contact Number" required>
+    <input name="location" type="text" placeholder="📍 Property Location" required>
+    <select name="type" required>
+      <option value="">🏠 Select Property Type</option>
+      <option>Residential</option><option>Commercial</option><option>Industrial</option><option>Land</option>
+    </select>
+    <input name="price" type="text" placeholder="💰 Expected Selling Price">
+    <textarea name="remarks" rows="3" placeholder="📝 Additional Remarks (Optional)"></textarea>
+    <button class="btn valuation-submit" type="submit">📲 Submit & WhatsApp Me</button>
+  </form>
 </section>
 
-<section class="section" id="valuation">
-
-<h2 class="section-title">
-🏠 FREE PROPERTY VALUATION
-</h2>
-
-<div class="form-box">
-
-<input
-type="text"
-id="name"
-placeholder="👤 Full Name">
-
-<input
-type="text"
-id="phone"
-placeholder="📱 Contact Number">
-
-<input
-type="text"
-id="location"
-placeholder="📍 Property Location">
-
-<select id="property">
-
-<option>🏠 Select Property Type</option>
-<option>Terrace House</option>
-<option>Semi-D</option>
-<option>Bungalow</option>
-<option>Condominium</option>
-<option>Apartment</option>
-<option>Shoplot</option>
-<option>Land</option>
-<option>Industrial Property</option>
-
-</select>
-
-<input
-type="text"
-id="asking"
-placeholder="💰 Expected Selling Price">
-
-<input
-type="text"
-id="remarks"
-placeholder="📝 Additional Remarks (Optional)">
-
-<button
-class="submit-btn"
-onclick="sendWhatsapp()">
-
-📲 Submit & WhatsApp Me
-
-</button>
-
-</div>
-
-</section>
-
-<section class="contact">
-
-<h2>
-📞 Contact Mylee Thay
-</h2>
-
-<p>REN 06204</p>
-
-<p>📱 019-2797299</p>
-
-<p>📱 012-3422309</p>
-
-<p>✉️ myleeproperties96@gmail.com</p>
-
-<br>
-
-<a
-href="https://wa.me/60123422309"
-class="btn">
-
-💬 Chat With Mylee
-
-</a>
-
-</section>
-
-<div class="footer">
-
-© 2025 Mylee Thay | Negeri Sembilan Property Specialist
-
-</div>
-
-<a
-class="whatsapp"
-href="https://wa.me/60123422309">
-
-💬 WhatsApp
-
-</a>
+<section class="contact" id="contact"><h2>Let's Talk Property.</h2><p>Looking for a property in Negeri Sembilan?<br>Connect with Mylee Thay.</p><a class="btn" href="https://wa.me/60123422309?text=Hello%20Mylee%2C%20I%20would%20like%20to%20enquire%20about%20a%20property.%20I%20am%20interested%20in%20buying%2C%20selling%2C%20or%20renting.%20Could%20you%20please%20assist%20me%3F">WHATSAPP MYLEE · 012-3422309</a><p>myleeproperties96@gmail.com &nbsp; | &nbsp; REN 06204</p></section>
+</main><footer>© 2026 12Buy Properties · Mylee Thay · Negeri Sembilan, Malaysia</footer>
 
 <script>
-
-function sendWhatsapp(){
-
-var name =
-document.getElementById("name").value;
-
-var phone =
-document.getElementById("phone").value;
-
-var location =
-document.getElementById("location").value;
-
-var property =
-document.getElementById("property").value;
-
-var asking =
-document.getElementById("asking").value;
-
-var remarks =
-document.getElementById("remarks").value;
-
-var message =
-
-"🏠 FREE PROPERTY VALUATION REQUEST %0A%0A" +
-
-"👤 Name: " + name + "%0A%0A" +
-
-"📱 Contact Number: " + phone + "%0A%0A" +
-
-"📍 Property Location: " + location + "%0A%0A" +
-
-"🏡 Property Type: " + property + "%0A%0A" +
-
-"💰 Expected Selling Price: " + asking + "%0A%0A" +
-
-"📝 Additional Remarks: " + remarks + "%0A%0A" +
-
-"Thank you.";
-
-window.open(
-"https://wa.me/60123422309?text=" + message,
-"_blank"
-);
-
-}
-
+document.getElementById('valuationForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  const f = new FormData(this);
+  const message = [
+    'Hello Mylee, I would like a free property valuation.',
+    'Full Name: ' + (f.get('name') || ''),
+    'Contact Number: ' + (f.get('phone') || ''),
+    'Property Location: ' + (f.get('location') || ''),
+    'Property Type: ' + (f.get('type') || ''),
+    'Expected Selling Price: ' + (f.get('price') || 'Not specified'),
+    'Additional Remarks: ' + (f.get('remarks') || 'None')
+  ].join('\\n');
+  window.open('https://wa.me/60123422309?text=' + encodeURIComponent(message), '_blank');
+});
 </script>
 
-</body>
-</html>
+<script>
+(function(){
+  let lang = 'en';
+  const button = document.getElementById('languageToggle');
+  const translations = {
+    'HOME':'首页','ABOUT':'关于我','PROPERTY SERVICES':'房产服务','AWARDS':'奖项与成就',
+    'VALUATION':'免费估价','CONTACT':'联系我',
+    'Your Property Journey Starts Here':'开启您的房产之旅',
+    'Find Your':'寻找理想房产','Property.':'成就美好未来。','Build Your Future.':'打造美好未来。',
+    'What I Do':'我的专业服务','Property Services':'房产服务',
+    'One trusted contact for your property needs.':'一个值得信赖的联系人，满足您的房产需求。',
+    'Homes, landed properties and residences.':'住宅、排屋及各类居住物业。',
+    'Shop offices and business properties.':'店铺、办公室及商业物业。',
+    'Factories, warehouses and industrial spaces.':'工厂、仓库及工业物业。',
+    'Land opportunities for investment and development.':'投资及发展用地。',
+    'Get to Know Mylee':'认识 Mylee','Experience You Can Trust.':'值得信赖的专业经验。',
+    'CONTACT MYLEE':'联系 Mylee','Years of Experience':'年房地产经验',
+    'Property Categories':'种房产类别','Registered Negotiator':'注册房地产谈判员',
+    'Negeri Sembilan Focus':'专注森美兰州','Recognition & Milestones':'专业认可与里程碑',
+    'Awards & Achievements':'奖项与成就',
+    'Thinking of Selling?':'想要出售您的房产？',
+    'Free Property Valuation':'免费房产估价',
+    'Share a few details about your property. Mylee will get in touch with you.':'填写您的房产资料，Mylee 将尽快与您联系。',
+    'Let\\'s Talk Property.':'让我们聊聊房产。',
+    'Looking for a property in Negeri Sembilan?':'正在森美兰寻找房产吗？',
+    'Connect with Mylee Thay.':'欢迎联系 Mylee Thay。',
+    'Residential':'住宅','Commercial':'商业','Industrial':'工业','Land':'土地',
+    'ESP Achievement':'ESP 成就',
+    'A milestone in Mylee\\'s professional journey.':'Mylee 专业旅程中的重要里程碑。',
+    'WHY MYLEE':'为什么选择我','AREAS':'服务地区',
+    'Why Work With Me':'为什么选择我','Why Choose Mylee?':'为什么选择 Mylee？',
+    'Professional guidance, local knowledge and support throughout your property journey.':'在您的房产旅程中，提供专业建议、当地市场知识与全程协助。',
+    '14 Years of Experience':'14 年房地产经验',
+    'Practical real estate experience to help you understand your options and make informed decisions.':'运用实际房地产经验，协助您了解选择并作出明智决定。',
+    'Local Market Knowledge':'熟悉当地市场',
+    'Focused on Negeri Sembilan, with knowledge of residential, commercial, industrial and land opportunities.':'专注森美兰州，熟悉住宅、商业、工业及土地房地产机会。',
+    'Guidance Throughout':'全程专业协助',
+    'Support from your first enquiry and property viewing through the next steps of your transaction.':'从初步咨询、看房到交易后续步骤，提供适当协助。',
+    'How I Can Help':'我可以怎样帮助您','What Are You Looking For?':'您正在寻找什么房产？',
+    'Whether you are buying, selling or renting, let\\'s discuss your property needs.':'无论您想买、卖或租房，欢迎与我讨论您的需求。',
+    'Looking to Buy?':'想要买房？','Looking to Sell?':'想要卖房？','Looking to Rent?':'想要租房？',
+    'Tell me your preferred location, budget and property type. I can help you explore suitable options in Negeri Sembilan.':'告诉我您理想的地点、预算和房产类别，我可以协助您寻找森美兰合适的选择。',
+    'Understand your property\\'s market position and discuss the next steps towards selling.':'了解您的房产市场定位，并讨论出售的下一步。',
+    'Share your preferred area, budget and requirements so we can discuss suitable rental options.':'告诉我您理想的地区、预算和需求，一起讨论合适的出租选择。',
+    'I WANT TO BUY →':'我想买房 →','REQUEST A FREE VALUATION →':'申请免费估价 →','I WANT TO RENT →':'我想租房 →',
+    'Where I Work':'我的服务地区','Explore Negeri Sembilan':'探索森美兰州',
+    'Property opportunities across key areas in Negeri Sembilan.':'探索森美兰州多个重点地区的房地产机会。',
+    'Good to Know':'常见问题','Frequently Asked Questions':'常见问题',
+    'A few helpful answers before we get started.':'开始之前，先了解一些常见问题。',
+    'I'm from Kuala Lumpur. Can you help me view properties in Negeri Sembilan?':'我来自吉隆坡，可以安排我到森美兰看房吗？',
+    'Yes. Contact Mylee with your preferred area and requirements to discuss suitable properties and arrange a viewing.':'可以。请联系 Mylee，告诉我您偏好的地区和需求，我们可以讨论合适的房产并安排看房。',
+    'Do you handle more than residential properties?':'你只处理住宅房地产吗？',
+    'Yes. Services cover Residential, Commercial, Industrial and Land property enquiries.':'不只住宅，也包括商业、工业及土地房地产咨询。',
+    'Can I ask for a property valuation?':'我可以申请房产估价吗？',
+    'Yes. Complete the Free Property Valuation form on this website and the details will be prepared in a WhatsApp message to Mylee.':'可以。填写网站上的免费房产估价表格，资料会整理成 WhatsApp 讯息发给 Mylee。',
+    'How do I get started?':'我该如何开始？',
+    'Use the Contact Mylee button and send the pre-filled WhatsApp message. You can share whether you want to buy, sell or rent.':'点击 Contact Mylee，发送预先填写的 WhatsApp 讯息，并告诉我您想买、卖或租房。'
+
+  };
+  const originalTexts = new WeakMap();
+  function apply(){
+    document.querySelectorAll('body *').forEach(el=>{
+      if(el.children.length===0 && el.textContent.trim()){
+        if(!originalTexts.has(el)) originalTexts.set(el, el.textContent);
+        const original = originalTexts.get(el).trim();
+        if(lang==='zh' && translations[original]) el.textContent=translations[original];
+        if(lang==='en') el.textContent=originalTexts.get(el);
+      }
+    });
+    const placeholders = [
+      ['👤 Full Name','👤 姓名'],['📱 Contact Number','📱 联络号码'],
+      ['📍 Property Location','📍 房产地点'],['💰 Expected Selling Price','💰 预期出售价格'],
+      ['📝 Additional Remarks (Optional)','📝 其他备注（可选）']
+    ];
+    document.querySelectorAll('input,textarea').forEach(field=>{
+      const pair=placeholders.find(p=>field.placeholder===p[0] || field.placeholder===p[1]);
+      if(pair) field.placeholder=lang==='zh'?pair[1]:pair[0];
+    });
+    const select=document.querySelector('#valuationForm select');
+    if(select && select.options.length){
+      select.options[0].text=lang==='zh'?'🏠 选择房产类别':'🏠 Select Property Type';
+      const names=lang==='zh'?['住宅','商业','工业','土地']:['Residential','Commercial','Industrial','Land'];
+      for(let i=1;i<select.options.length && i<=4;i++) select.options[i].text=names[i-1];
+    }
+    const submit=document.querySelector('#valuationForm button[type="submit"]');
+    if(submit) submit.textContent=lang==='zh'?'📲 提交并通过 WhatsApp 联系我':'📲 Submit & WhatsApp Me';
+    if(button) button.textContent=lang==='zh'?'中文 | EN':'EN | 中文';
+    document.documentElement.lang=lang==='zh'?'zh-CN':'en';
+  }
+  if(button) button.addEventListener('click',()=>{lang=lang==='en'?'zh':'en';apply();});
+})();
+</script>
+
+</body></html>
